@@ -7,17 +7,8 @@ import { Product } from './interfaces/prroducts.interface';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'ngProducts';
-  products:Product[] = [];
 
-  constructor(private productService:NodeserviceService){}
-
-  ngOnInit(): void {
-      this.productService.getProductsFromMyNodeServer().subscribe( (products) =>{
-        console.log(products);
-        this.products = products;
-      })
-  }
 
 }

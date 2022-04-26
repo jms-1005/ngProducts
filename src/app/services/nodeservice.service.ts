@@ -13,4 +13,8 @@ export class NodeserviceService {
     return this.nodehttp.get<Product[]>(this.url);
   }
 
+  getProduct(id:any){
+    return this.nodehttp.get<Product>(this.url+'/'+id);
+  }
+
 }

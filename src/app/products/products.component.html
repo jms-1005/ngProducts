@@ -1,0 +1,6 @@
+<div *ngFor="let product of products;let i=index;">
+  <img [src]="product.image" class="productImage"/>
+  <h3>{{ product.name | uppercase }}</h3>
+  <p>{{ product.price | currency:'CAD' }}</p>
+  <a [routerLink]="['/product-details/', i]">More details...</a>
+</div>
